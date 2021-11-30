@@ -11,9 +11,12 @@ h2 {
   color: $primary-copy;
 }
 body {
+  @include flex(column, nowrap, flex-start, stretch);
+  min-height: 100vh;
   font-family: "Inter", sans-serif;
   font-size: 14px;
   color: $secondary-copy;
+  background: $theme-bg;
   @media (min-width: $md) {
     font-size: 16px;
   }

@@ -11,9 +11,16 @@ h2 {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  min-height: 100vh;
   font-family: "Inter", sans-serif;
   font-size: 14px;
   color: #808c8b;
+  background: #f9f9f9;
 }
 @media (min-width: 768px) {
   body {
@@ -47,6 +54,193 @@ header h2 {
 }
 header .content-wrapper {
   padding: 1rem;
+}
+
+main form {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 768px;
+}
+main form fieldset {
+  padding: 0 1rem;
+  border: none;
+}
+main form fieldset legend {
+  color: #525e5d;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+main form fieldset .input-group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 2rem 0;
+}
+@media (min-width: 768px) {
+  main form fieldset .input-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0;
+  }
+  main form fieldset .input-group label {
+    min-width: 10rem;
+  }
+}
+main form fieldset .input-group input,
+main form fieldset .input-group select,
+main form fieldset .input-group textarea {
+  height: 3rem;
+  width: 100%;
+  color: #808c8b;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: 0.3s;
+  background: #eeecec;
+  margin-top: 0.33rem;
+}
+main form fieldset .input-group input:focus,
+main form fieldset .input-group select:focus,
+main form fieldset .input-group textarea:focus {
+  border-color: rgba(82, 94, 93, 0.5);
+  outline: #525e5d;
+  background: white;
+  transform: scale(1.025);
+  box-shadow: 0 4px 8px rgba(59, 59, 59, 0.25);
+}
+main form fieldset .input-group input.zip-input,
+main form fieldset .input-group select.zip-input,
+main form fieldset .input-group textarea.zip-input {
+  width: 50%;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  main form fieldset .input-group input.zip-input,
+main form fieldset .input-group select.zip-input,
+main form fieldset .input-group textarea.zip-input {
+    width: 25%;
+  }
+}
+main form fieldset .newsletter-options .section-title {
+  color: #525e5d;
+  margin: 1rem auto;
+}
+main form fieldset .newsletter-options .option-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1rem auto;
+}
+main form fieldset .newsletter-options .option-group input[type=checkbox] {
+  -webkit-appearance: none;
+  background-color: #fafafa;
+  border: 1px solid #cacece;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 9px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+  margin-right: 0.6rem;
+  outline-color: #5fb2bd;
+}
+main form fieldset .newsletter-options .option-group input[type=checkbox]:checked {
+  background: #5fb2bd;
+  border: 1px solid white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+}
+main form fieldset .newsletter-format .section-title {
+  color: #525e5d;
+  margin: 2rem auto 1rem;
+}
+main form fieldset .newsletter-format .option-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1rem auto;
+}
+main form fieldset .newsletter-format .option-group input[type=radio] {
+  -webkit-appearance: none;
+  background-color: #fafafa;
+  border: 1px solid #cacece;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 9px;
+  border-radius: 25px;
+  display: inline-block;
+  position: relative;
+  margin-right: 0.6rem;
+  outline-color: #5fb2bd;
+}
+main form fieldset .newsletter-format .option-group input[type=radio]:checked {
+  background: #5fb2bd;
+  border: 1px solid white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+}
+main form fieldset .other-topics-feedback {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+main form fieldset .other-topics-feedback label {
+  color: #525e5d;
+  margin-top: 2rem;
+}
+main form fieldset .other-topics-feedback textarea {
+  font-family: "Inter", sans-serif;
+  margin-top: 1rem;
+  width: 100%;
+  min-height: 200px;
+  resize: none;
+  color: #808c8b;
+  padding: 1rem;
+  border-radius: 5px;
+  transition: 0.3s;
+  background: #eeecec;
+  border: 1px solid transparent;
+}
+main form fieldset .other-topics-feedback textarea:focus {
+  border-color: rgba(82, 94, 93, 0.5);
+  outline: #525e5d;
+  background: white;
+  transform: scale(1.025);
+  box-shadow: 0 4px 8px rgba(59, 59, 59, 0.25);
+}
+main form fieldset button {
+  margin-bottom: 3rem;
+  background: #5fb2bd;
+  color: white;
+  border-radius: 5px;
+  padding: 1rem;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.3rem;
+}
+main form fieldset button:hover {
+  background: #449aa5;
+}
+
+footer {
+  background: #ececec;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  font-size: 0.8rem;
 }
 
 .divider-div {

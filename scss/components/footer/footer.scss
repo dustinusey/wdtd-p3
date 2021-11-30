@@ -1,0 +1,7 @@
+footer {
+  background: darken($theme-bg, 5%);
+  @include size(200px, 100%);
+  @include centerFlex();
+  margin-top: auto;
+  font-size: 0.8rem;
+}
