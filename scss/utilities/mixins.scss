@@ -1,0 +1,53 @@
+@mixin flex($d, $w, $j, $a) {
+  @content;
+  display: flex;
+  flex-direction: $d;
+  flex-wrap: $w;
+  justify-content: $j;
+  align-items: $a;
+}
+
+@mixin centerFlex($d: null) {
+  @content;
+  display: flex;
+  flex-direction: $d;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin size($h, $w) {
+  @content;
+  height: $h;
+  width: $w;
+}
+
+@mixin simpleSize($s) {
+  @content;
+  height: $s;
+  width: $s;
+  min-height: $s;
+  min-width: $s;
+}
+
+@mixin textOverflow($l) {
+  @content;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $l;
+}
+
+@mixin absoluteCenter($f: null) {
+  @content;
+  position: absolute;
+  position: $f;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin glass($blur) {
+  @content;
+  backdrop-filter: blur($blur);
+}

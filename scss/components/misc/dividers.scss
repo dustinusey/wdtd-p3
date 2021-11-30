@@ -1,0 +1,16 @@
+.divider-div {
+  padding: 2rem 1rem;
+  .divider {
+    background: $divider-color;
+    border-radius: 25px;
+    display: block;
+    &.big-divider {
+      @include size(0.4rem, 100%);
+      margin-bottom: 0.33rem;
+    }
+    &.small-divider {
+      @include size(0.25rem, 90%);
+      margin: 0 auto;
+    }
+  }
+}
